@@ -1,1 +1,43 @@
+<!doctype html>
+<html ng-app="loginApp">
+	<head>
+		<meta charset="utf-8">
+		<title>ThinkCapsule Login page</title>
+		<!-- bootstrap -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./styles.css" rel="stylesheet">
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<!-- Firebase -->
+		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		<!-- AngularFire -->
+		<script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+		<script src="./app.js"></script>
 
+	</head>
+	<body>
+
+		<form name="loginForm" ng-controller="loginCtrl">			
+			<img id="logo" alt="Kapacino Logo">
+
+			<div class="col-lg-12">
+				<div class="row">
+					<button id="facebookLoginBtn" class="loginBtn" ng-click="loginWithFacebook()">Continue with FB</button> 
+					<button id="googleLoginBtn" class="loginBtn" ng-click="loginWithGoogle()">Continue with Google</button>
+				</div>
+			</div>
+
+			<p>  or connect with </p>
+
+			<div class="col-lg-12">
+				<input type="email" name="email" id="needsEmail" placeholder="email"/>
+			</div>
+			<div class="col-lg-12">
+				<input type="password" name="pass" id="needsPass" placeholder="password"/>
+			</div>
+		</form>
+
+	</body>
+
+
+</html>
