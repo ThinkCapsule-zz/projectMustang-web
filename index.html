@@ -4,12 +4,14 @@
 		<meta charset="utf-8">
 		<title>ThinkCapsule Login page</title>
 		<!-- bootstrap -->
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link href="./css/styles.css" rel="stylesheet">
-		<!-- AngularJS -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href="./css/bootstrap-social.css" rel="stylesheet">
 		<!-- Firebase -->
 		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 		<!-- AngularFire -->
 		<script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
 		<script src="./js/app.js"></script>
@@ -20,14 +22,9 @@
 		<form name="loginForm" ng-controller="loginCtrl">			
 			<img id="logo" alt="Kapacino Logo">
 
-			<div class="col-lg-12">
-				<div class="row">
-					<button id="facebookLoginBtn" class="loginBtn" ng-click="loginWithFacebook()">Continue with FB</button> 
-					<button id="googleLoginBtn" class="loginBtn" ng-click="loginWithGoogle()">Continue with Google</button>
-				</div>
-			</div>
+			
 
-			<p>  or connect with </p>
+			
 
 			<div class="col-lg-12">
 				<input type="email" name="email" id="needsEmail" placeholder="email"/>
@@ -37,6 +34,32 @@
 			</div>
 
 			<button id="signupBtn" ng-click="loginWithEmail()">Sign up!</button>
+
+			<div class="option">
+				
+				<hr class="col-lg-1">
+					<p class="col-lg-3">or connect with</p>
+				<hr class="col-lg-1">
+				
+			</div>
+
+
+
+			
+			<div class="row">
+				<div class="col-lg-2">
+					<a ng-click="loginWithFacebook()" class="btn btn-block btn-social btn-facebook">
+    					<i class="fa fa-facebook"></i> Sign in with Facebook
+  					</a>
+  				</div>
+
+				<div class="col-lg-2">
+					<a ng-click="loginWithGoogle()" class="btn btn-block btn-social btn-google">
+    					<i class="fa fa-google"></i> Sign in with Google
+  					</a>
+  				</div>
+			</div>
+			
 
 		</form>
 
