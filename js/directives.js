@@ -7,3 +7,11 @@
 	Last modified : 08/28/2015
 
 ***/
+app.directive("navbar", function(){
+	return {
+		restrict: "E",
+		replace: true,
+		transclude: true,
+		templateUrl: "../components/navbar.html"
+	}
+});
