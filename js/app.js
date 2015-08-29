@@ -6,4 +6,4 @@
 
 ***/
 
-var app = angular.module("kapacinoWebAppApp", ["firebase"]);
+var app = angular.module("kapacinoWebAppApp", ["firebase","ngRoute"]);
