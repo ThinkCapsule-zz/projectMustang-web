@@ -41,3 +41,7 @@ app.controller("loginCtrl", function($scope, $firebaseAuth) {
 	};
 
 });
+
+app.controller("mainPageCtrl", function($scope) {
+	// TODO fill this out
+});

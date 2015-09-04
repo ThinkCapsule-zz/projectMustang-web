@@ -12,7 +12,7 @@ app.config(function ($routeProvider) {
 	$routeProvider
 	.when('/', {
 		controller: 'mainPageCtrl',
-		templateUrl: 'index.html'
+		templateUrl: '../index.html'
 	})
 	.otherwise({
 		redirectTo: '/'
