@@ -1,7 +1,7 @@
 (function (angular) {
   "use strict";
 
-  var app = angular.module('myApp.chat', ['ngRoute', 'firebase.utils', 'firebase']);
+  var app = angular.module('kapacinoApp.chat', ['ngRoute', 'firebase.utils', 'firebase']);
 
   app.controller('ChatCtrl', ['$scope', 'messageList', function($scope, messageList) {
       $scope.messages = messageList;

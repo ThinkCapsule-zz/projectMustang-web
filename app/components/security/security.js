@@ -5,7 +5,7 @@
   // to be used by authRequired() in the services below
   var securedRoutes = [];
 
-  angular.module('myApp.security', ['ngRoute', 'firebase.auth', 'myApp.config'])
+  angular.module('kapacinoApp.security', ['ngRoute', 'firebase.auth', 'kapacinoApp.config'])
 
     .config(['$routeProvider', function ($routeProvider) {
       // routes which are not in our map are redirected to /home

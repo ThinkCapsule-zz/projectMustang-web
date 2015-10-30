@@ -1,7 +1,7 @@
 describe('reverse', function() {
   var reverse;
   beforeEach(function() {
-    module('myApp');
+    module('kapacinoApp');
     inject(function (reverseFilter) {
       reverse = reverseFilter;
     });
