@@ -1,11 +1,10 @@
 {
-  "name": "angularfire-seed",
-  "description": "A starter project for Angular + Firebase with AngularFire",
+  "name": "kapacinoApp",
+  "description": "Kapacino Web App - Social News for University Campuses",
   "version": "1.0.0",
-  "homepage": "https://github.com/firebase/angularfire-seed",
-  "repository": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/ThinkCapsule/projectMustang-web.git",
+  "repository": "https://github.com/ThinkCapsule/projectMustang-web.git",
   "private": true,
-  "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
     "protractor": "~0.20.1",

@@ -1,13 +1,13 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
-    'myApp.config',
-    'myApp.security',
-    'myApp.home',
-    'myApp.account',
-    'myApp.chat',
-    'myApp.login'
+angular.module('kapacinoApp', [
+    'kapacinoApp.config',
+    'kapacinoApp.security',
+    'kapacinoApp.home',
+    'kapacinoApp.account',
+    'kapacinoApp.chat',
+    'kapacinoApp.login'
   ])
   
   .config(['$routeProvider', function ($routeProvider) {
