@@ -1,7 +1,7 @@
 (function (angular) {
   "use strict";
 
-  var app = angular.module('myApp.account', ['firebase', 'firebase.utils', 'firebase.auth', 'ngRoute']);
+  var app = angular.module('kapacinoApp.account', ['firebase', 'firebase.utils', 'firebase.auth', 'ngRoute']);
 
   app.controller('AccountCtrl', ['$scope', 'Auth', 'fbutil', 'user', '$location', '$firebaseObject',
     function($scope, Auth, fbutil, user, $location, $firebaseObject) {

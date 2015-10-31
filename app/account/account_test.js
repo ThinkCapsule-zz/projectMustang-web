@@ -1,8 +1,8 @@
 
-describe('myApp.account', function() {
+describe('kapacinoApp.account', function() {
   beforeEach(function() {
-    module('myApp');
-    module('myApp.account');
+    module('kapacinoApp');
+    module('kapacinoApp.account');
   });
 
   describe('AccountCtrl', function() {
