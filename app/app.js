@@ -10,13 +10,16 @@ angular.module('kapacinoApp', [
     'kapacinoApp.login',
     'kapacinoApp.directives'
   ])
-  
+  // Handles routing for the app
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'index.html'
+      templateUrl: 'views/index.html'
+    })
+    .when('/login', {
+      templateUrl: 'views/login.htmls'
     })
     .otherwise({
-      redirectTo: '/home'
+      redirectTo: 'views/index.html'
     });
   }])
   
