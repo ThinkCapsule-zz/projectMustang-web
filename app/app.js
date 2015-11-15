@@ -7,11 +7,15 @@ angular.module('kapacinoApp', [
     'kapacinoApp.home',
     'kapacinoApp.account',
     'kapacinoApp.chat',
-    'kapacinoApp.login'
+    'kapacinoApp.login',
+    'kapacinoApp.directives'
   ])
   
   .config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.otherwise({
+    $routeProvider.when('/', {
+      templateUrl: 'index.html'
+    })
+    .otherwise({
       redirectTo: '/home'
     });
   }])

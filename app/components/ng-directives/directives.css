@@ -1,0 +1,60 @@
+#whats-happening-img { 
+	position: relative; 
+	max-width: 300px;
+	max-height: 250px;
+}
+
+#hits { 
+    position: relative; 
+	top: 200px; 
+	left: 0; 
+	width: 100%; 
+	z-index: 100;
+	margin-left: 0.5px;
+	padding-left: 10px;
+}
+#trending-hits{
+	float: below;
+}
+#hits-span{
+	color: white;
+	background-color: orange;
+	padding: 5px;
+}
+#whats-happening-heading{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: -15px;
+}
+#article-preview{
+	width: 300px;
+	color: grey;
+	margin-bottom: -10px;
+	font-size: 12px;
+}
+#trending-article-preview{
+	color: white;
+}
+#timestamp{
+	color: red;
+}
+#trending-grey-box{
+	background-color: #5C5C5A;
+	padding: 10px;
+	max-width: 600px;
+}
+#trending-img{
+	max-width: 300px;
+	float: left;
+}
+#trending-heading{
+	display: inline;
+	color: white;
+	font-size: 25px;
+}
+#trending-text-body{
+	margin-left: 310px;
+}
+#trending-time{
+	color:orange;
+}
