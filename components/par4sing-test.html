@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="Components.css">
+		<script src="contentful.js"></script>
+			<script>
+			var article={
+				headline:"NULL",
+				author:"NULL",
+				body:"NULL",
+				subtitle:"NULL",
+				thumbnail:"",
+			}
+			console.log("heloo");
+			console.log("heloo");
+			var client = contentful.createClient({
+				space: '1oq1lgnwupsh',
+				accessToken: '9e202ccaa19212267e8a417356d41277c51ea827b2a1122c00f8f3ea0c25dfe3',
+				secure: true,
+				resolveLinks: true
+			});
+
+			client.space().then(
+				function(space) { console.log(space); },
+				function(error) { console.error(error); }
+				);
+			client.entry('aPMsX764zQmGEmowW08k2').then(function(result){
+				console.log("hello");
+				console.log(result);
+				console.log("hello");
+				console.log(result.fields.articleBody);
+				article.headline = result.fields.headline;
+				article.author = result.fields.byline;
+				article.body = result.fields.articleBody;
+				//article.thumbnail = result.fields.thumbnails[0];
+
+				//console.log(article.subtitle);
+
+				document.getElementById('whats-happening-heading').innerHTML = article.headline;
+				document.getElementById('article').innerHTML = article.body;
+				//Getting each image into the even indexes
+				var s = article.body;
+				var textArray = [];
+				var nameArray = [];
+				var arrS = [];
+				arrS = s.split("![");
+				textArray = arrS;
+				//get name from even indexes
+				for(var i=1;i<arrS.length;i++){
+					var tempArr = arrS[i].split("]",1);
+					nameArray.push(tempArr[0]);
+				}
+
+				console.log(nameArray);
+				console.log("before array");
+				console.log(arrS);
+				console.log("after array");
+				//document.getElementById('trial-string').innerHTML = 
+
+				//document.getElementById('whats-happening-img').setAttribute('src','https://images.contentful.com/1oq1lgnwupsh/2AbWNCATWgMCIAWiYsMcQ6/b3291c42014c66d832216f269fccf971/Screen_Shot_2015-09-02_at_10.13.38_AM.png')
+				//document.getElementById('image-container').style.backgroundImage = "url('https://images.contentful.com/1oq1lgnwupsh/2AbWNCATWgMCIAWiYsMcQ6/b3291c42014c66d832216f269fccf971/Screen_Shot_2015-09-02_at_10.13.38_AM.png')";
+			}, function(err){
+				console.log(err);
+			});
+			
+			</script>
+	</head>
+
+	<body>
+		<h1 id="whats-happening-heading">Photogenic Cat</h1>
+		
+		<p id="article">
+			Cat is photogenic. Cat is photogenic. Cat is photogenic. Cat is photogenic. Cat is photogenic. Cat is photogenic. Cat is photogenic.  
+		</p>
+
+		<p id="trial-string">did not work</p>
+
+	</body>
+</html>
