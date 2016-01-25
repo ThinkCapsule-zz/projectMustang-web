@@ -42,15 +42,21 @@
 				var s = article.body;
 				var textArray = [];
 				var nameArray = [];
+				var imageURLArray = [];
 				var arrS = [];
 				arrS = s.split("![");
 				textArray = arrS;
-				//get name from even indexes
+				//get name/imageURL from even indexes
 				for(var i=1;i<arrS.length;i++){
-					var tempArr = arrS[i].split("]",1);
+					//get name
+					var tempArr = arrS[i].split("](");
 					nameArray.push(tempArr[0]);
+					//get image URL
+					tempArr = tempArr[1].split(")",2);
+					console.log(tempArr[1]);
+					imageURLArray.push(tempArr[0]);
 				}
-
+				console.log(imageURLArray);
 				console.log(nameArray);
 				console.log("before array");
 				console.log(arrS);
