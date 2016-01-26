@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8"/>
 		<link rel="stylesheet" type="text/css" href="Components.css">
 		<script src="contentful.js"></script>
+		<script src="marked.min.js"></script>
 			<script>
+			//var marked = require('marked');
+			console.log(marked('I am using __markdown__.'));
+
 			var article={
 				headline:"NULL",
 				author:"NULL",
@@ -37,7 +42,7 @@
 				//console.log(article.subtitle);
 
 				document.getElementById('whats-happening-heading').innerHTML = article.headline;
-				document.getElementById('article').innerHTML = article.body;
+				document.getElementById('article').innerHTML = marked(article.body);
 				//Getting each image into the even indexes
 				var s = article.body;
 				var textArray = [];
